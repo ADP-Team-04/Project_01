@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    /* background-color: rgb(84,105,92); */
+    background-color: rgb(84,105,92);
+    font-family: Inter;
 }
 .box-all {
     width: 50vw;
@@ -11,13 +12,13 @@ body {
     margin: 0px auto;
     border: 1px solid;border: none;
     border-radius: 15px;
-    padding: 20px 40px;
+    padding: 20px 40px 50px 40px;
     width: 18em;
     height: 12em;
     text-align: center;
     margin-top: 15%;
     background: linear-gradient(180deg, rgb(65,62,62) 50%, rgb(174,198,144) 50%);
-    /* box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5); */
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
 }
 .heading {
     margin-top: 0px;
@@ -29,7 +30,6 @@ body {
 }
 .result {
     margin-top: 10px;
-    margin-bottom: 20px;
     border: 1px solid;
     padding: 35px 5px;
     background-color: rgb(209,215,195);
@@ -37,29 +37,26 @@ body {
     border-radius: 10px;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
 }
-/* .result-display {
-    margin-top: 10px;
+
+.result-display {
     margin-bottom: 20px;
-    border: 1px solid;
-    padding: 35px 5px;
-    background-color: rgb(209,215,195);
-    font-family: Inter;
-    font-size: 15px;
-    font-weight: bolder;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
 }
-.btn {
-    width: 115px;
+
+#result-last {
     height: 35px;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 20px;
-    font-family: Inter;
-    font-weight: bold;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.copy-btn,.exit-btn {
+    width: 70px;
+    height: 35px;
+    font-size: 20px;
+    border: none;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-} */
+}
+.copy-btn {
+    margin-right: 30px;
+}
