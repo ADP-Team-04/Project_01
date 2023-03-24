@@ -1,7 +1,7 @@
 var a,b;
 var kqua;
 function clickResult() {
-    window.location.href = 'result.html';
+    window.location.href = 'resultMulti.html';
     a = Number(eval(document.getElementById("num1").value));
     b = Number(eval(document.getElementById("num2").value));
     kqua = String(a*b);
@@ -12,5 +12,5 @@ function deleteEle() {
     document.getElementById("num2").value = "";
 }
 function exitResult() {
-    window.location.href = 'phepnhan.html';
+    window.location.href = 'multi.html';
 }
