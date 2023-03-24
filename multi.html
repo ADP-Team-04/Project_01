@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Phép nhân</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phép nhân</title>
     <link rel="stylesheet" href="./assets/css/style-multi.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="box-all">
         <div class="multi-box">
@@ -31,13 +37,87 @@
                     <p class="alert-error">&emsp;</p>
                 </div>
             </div>
+            <div style="display: none;" id="table-board-box">
+                <table id="table-board">
+                    <tr>
+                        <td>
+                            <button>AC</button>
+                        </td>
+                        <td>
+                            <button>+/-</button>
+                        </td>
+                        <td>
+                            <button>/</button>
+                        </td>
+                        <td>
+                            <button><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>7</button>
+                        </td>
+                        <td>
+                            <button>8</button>
+                        </td>
+                        <td>
+                            <button>9</button>
+                        </td>
+                        <td>
+                            <button>x</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>4</button>
+                        </td>
+                        <td>
+                            <button>5</button>
+                        </td>
+                        <td>
+                            <button>6</button>
+                        </td>
+                        <td>
+                            <button>-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>1</button>
+                        </td>
+                        <td>
+                            <button>2</button>
+                        </td>
+                        <td>
+                            <button>3</button>
+                        </td>
+                        <td>
+                            <button>+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button><i class="fa-sharp fa-solid fa-rotate-left"></i></button>
+                        </td>
+                        <td>
+                            <button>0</button>
+                        </td>
+                        <td>
+                            <button>.</button>
+                        </td>
+                        <td>
+                            <button>=</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="keyboard-box" style="text-align: right; margin-bottom: 5px; margin-right: 20px;">
-                <button class="keyboard-down">
+                <button class="keyboard-down" onclick="dropKeyBoard()">
                     <i class="fa-sharp fa-solid fa-keyboard"></i>
                 </button>
             </div>
             <div class="button-box">
-                <button class="back-btn">
+                <button class="back-btn" id="back-click">
                     <i class="fa-sharp fa-solid fa-rotate-left"></i>
                 </button>
                 <button class="result-btn" id="result-click" onclick="clickResult()">Result</button>
@@ -47,9 +127,8 @@
             </div>
         </div>
     </div>
-	<script src="./assets/js/js-multi.js">
-    </script>
-    <script>
+    <script src="./assets/js/js-multi.js">
     </script>
 </body>
+
 </html>
