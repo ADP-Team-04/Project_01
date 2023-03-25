@@ -1,12 +1,13 @@
 body{
     margin: 0;
-    background-color: rgb(84,105,92);
+    background-color: rgb(223, 235, 227);
     font-family: Inter;
 }
 .full-box{
     width: 50vw;
     min-height: 50vh;
     margin: 0 auto;
+    position: relative;
 
 }
 .title{
@@ -31,6 +32,15 @@ body{
     border-radius: 15px;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
 }
+.button-box{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 40px;
+    width: 18em;
+    margin-bottom: 20px;
+    margin-bottom: auto;
+}
 .return-btn,.delete-btn {
     width: 70px;
     height: 35px;
@@ -38,16 +48,32 @@ body{
     border: none;
     border-radius: 15px;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center ;
-    
+    cursor: pointer; 
 }
 button:hover{
     color: aliceblue;
     background-color: darkgreen;
+}
+.input-number{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding: 20px 5px 20px 5px;
+    background-color: azure;
+    width: 288px;
+    height: 100px;
+    font-size: 15px;
+    border: none;
+    border-radius: 3%;
+}
+.num1-inphut,.num2-input{
+    margin: auto;
+    font-weight: bold;
+}
+.keyboard-box{
+    margin-bottom: 0;
+    padding: 20px 5px 10px 5px;
+    width: 70px;
 }
 .result-btn {
     width: 115px;

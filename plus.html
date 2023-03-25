@@ -14,23 +14,32 @@
             <p class="title">PLUS</p>
             <div class="input-number">
                 <div class="num1-input">
-                    <label for="num1" >NUMBER 1</label>
+                    <label for="num1" ><b>Number 1</b> </label>
                     <input type="text" id="num1">
                 </div>
-                </div class="num2-input">
-                    <label for="num2" >NUMBER 2</label>
+                <div>
+                    <p class="alert-error">&emsp;</p>
+                </div>
+                <div class="num2-input">
+                    <label for="num2" >Number 2</label>
                     <input type="text" id="num2">
                 </div>
-                <div class="button-box">
-                    <button class="return-btn" id="return-click">
-                        <i class="fa-solid fa-turn-down-left"></i>
-                    </button>
-                    <button class="result-btn" id="result-click" onclick="clickResult()">Result</button>
-                    <button class="delete-btn" id="delete-click" onclick="deleteEle()">
-                        <i class="fa-sharp fa-solid fa-delete-left"></i>
-                    </button>
+                <div>
+                    <p class="alert-error">&emsp;</p>
                 </div>
-
+            </div>
+            <div class="keyboard-box">
+                <i class="fa-regular fa-keyboard"></i>
+            </div>
+            <div class="button-box">
+                <button class="return-btn" id="return-click">
+                     <i class="fa-solid fa-turn-down-left"></i>
+                </button>
+                <button class="result-btn" id="result-click" onclick="clickResult()">Result</button>
+                <button class="delete-btn" id="delete-click" onclick="deleteEle()">
+                    <i class="fa-sharp fa-solid fa-delete-left"></i>
+                </button>
+            </div>
         </div>
     </div>
     <script src="assets/js/plusJs.js"></script>
