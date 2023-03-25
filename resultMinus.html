@@ -14,8 +14,16 @@
                 <div clas = "result-display">
                     <input type="text" id="result-last" readonly>
                 </div>
+                <div>
+                    <button class="copy-btn">Copy</button>
+                    <button class="exit-btn">Exit</button>
+                </div>
             </div>
         </div>
     </div>
+    <script src ="assets/js/minus.js"></script>
+    <script>
+        document.getElementById("result-last").value = localStorage.getItem("Input");
+    </script>
 </body>
 </html>
