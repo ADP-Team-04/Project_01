@@ -37,7 +37,7 @@ body {
     background-color: rgb(209,215,195);
     font-family: Inter;
     font-size: 15px;
-    font-weight: bolder;
+    font-weight: bold;
     border: none;
     border-radius: 10px;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
@@ -49,6 +49,8 @@ body {
     border: none;
     border-radius: 5px;
     text-align: center;
+    font-size: 14px;
+    font-weight: bold;
 }
 .back-btn,.delete-btn {
     width: 70px;
@@ -81,4 +83,20 @@ body {
     border: none;
     border-radius: 3px;
     margin-bottom: 10px;
+}
+.button-input, button {
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#table-board {
+    width: 288px;
+    margin: 0px auto;
+    background-color: rgb(119, 131, 92);
+    padding: 10px 10px;
+    border-radius: 10px;
 }
