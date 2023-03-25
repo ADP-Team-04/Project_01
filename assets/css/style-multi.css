@@ -52,6 +52,7 @@ body {
     font-size: 14px;
     font-weight: bold;
 }
+
 .back-btn,.delete-btn {
     width: 70px;
     height: 35px;
@@ -74,9 +75,13 @@ body {
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
-.alert-error {
+#alert-error1, #alert-error2 {
     margin-top: 0px;
     margin-bottom: 10px;
+    margin-left: 50px;
+    color: red;
+    font-weight: normal;
+    font-size: 10px;
 }
 .keyboard-down {
     background-color: rgb(217,217,217);
