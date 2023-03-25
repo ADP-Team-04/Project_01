@@ -43,6 +43,8 @@ body {
 }
 
 #result-last {
+    font-size: 14px;
+    font-weight: bold;
     height: 35px;
     border: none;
     border-radius: 5px;
