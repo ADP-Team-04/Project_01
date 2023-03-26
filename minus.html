@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minus</title>
+    <link rel="stylesheet" href="assets/css/minus.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
@@ -12,30 +13,37 @@
     <div class = "all">
         <div class = "minus">
             <p class = "heading">MINUS</p>
-                <div class = "inputNumber1">
-                    <label for="num1">Number 1  </label>
+            <div class="inputNumber">
+                <div class="num1-input">
+                    <label for="num1">Number 1</label>
                     <input type="text" id="num1">
                 </div>
-                <div class="inputNumber2">
-                    <label for="num2">Number 2  </label>
+                <div>
+                    <p id="alert-error1">&emsp;</p>
+                </div>
+                <div class="num2-input">
+                    <label for="num2">Number 2</label>
                     <input type="text" id="num2">
                 </div>
-                <div class = "button">
-                    <button class="back-btn"> 
+                <div>
+                    <p id="alert-error2">&emsp;</p>
+                </div>
+                
+                <div class = "button" >
+                    <button class="back-btn" onclick="exitMinus()"> 
                         <i class="fa-solid fa-rotate-left"></i>
                     </button>
                     <button class = "result-btn" id = " result-click" onclick="clickResult()">Result</button>
-                    <button class = " delete-btn" id = " delete-btn" >
+                    <button class = " delete-btn" id = " delete-btn" onclick="deleteEle()">
                         <i class="fa-solid fa-delete-left"></i>
-                    </button>
-                    <button class ="keyboard-btn" id="keyboard">
-                        <i class="fa-solid fa-keyboard"></i>
                     </button>
                 </div>
         </div>
     </div>
-    <script src="assets\js\minus.js">
-        
+    <script src="assets\js\minus.js"></script>
+    <script>
+        document.getElementById('num1').addEventListener('click',function() {input1 = true; input2 = false;});
+        document.getElementById('num2').addEventListener('click',function() {input1 = false; input2 = true;});
     </script>
 </body>
 </html>

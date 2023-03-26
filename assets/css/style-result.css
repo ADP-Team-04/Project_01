@@ -3,7 +3,7 @@ body {
     background-color: rgb(84,105,92);
     font-family: Inter;
 }
-.box-all {
+.all {
     width: 50vw;
     min-height: 50vh;
     margin: 0 auto;
@@ -51,10 +51,13 @@ body {
 
 .copy-btn,.exit-btn {
     width: 70px;
-    height: 35px;
+    height: 30px;
     font-size: 20px;
+    font-family: Inter;
+    font-weight: bold;
     border: none;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 .copy-btn {
