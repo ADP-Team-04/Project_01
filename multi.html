@@ -41,16 +41,16 @@
                 <table id="table-board">
                     <tr>
                         <td>
-                            <button onclick="deleteEle()" style="cursor: pointer;">AC</button>
+                            <button onclick="deleteAll()" style="cursor: pointer;">AC</button>
                         </td>
                         <td>
-                            <input class="button-input" type="button" id="pos-neg" value="+/-">
+                            <input class="button-input" type="button" id="pos-neg" value="+/-" onclick="opposite()">
                         </td>
                         <td>
                             <input class="button-input" type="button" id="div" value="/" onclick="clickInput('/')">
                         </td>
                         <td>
-                            <button><i class="fa-sharp fa-solid fa-delete-left" style="cursor: pointer;"></i></button>
+                            <button style="cursor: pointer;" onclick="deleteOneElement()"><i class="fa-sharp fa-solid fa-delete-left"></i></button>
                         </td>
                     </tr>
                     <tr>
@@ -117,11 +117,11 @@
                 </button>
             </div>
             <div class="button-box">
-                <button class="back-btn" id="back-click" onclick="">
+                <button class="back-btn" id="back-click" onclick="backToMenu()">
                     <i class="fa-sharp fa-solid fa-rotate-left"></i>
                 </button>
                 <button class="result-btn" id="result-click" onclick="clickResult()">Result</button>
-                <button class="delete-btn" id="delete-click" onclick="deleteEle()">
+                <button class="delete-btn" id="delete-click" onclick="deleteAll()">
                     <i class="fa-sharp fa-solid fa-delete-left"></i>
                 </button>
             </div>

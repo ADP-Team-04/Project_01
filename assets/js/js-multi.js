@@ -6,13 +6,27 @@ var times = 0;
 var input1 = false;
 var input2 = false;
 var nofalse = true;
+var timesOpposite1 = 0;
+var timesOpposite2 = 0;
 function backToMenu() {
-    
+    window.location.href = "index.html";
 }
 function clickResult() {
+    document.getElementById("alert-error1").innerHTML = '&emsp;';
+    document.getElementById("alert-error2").innerHTML = '&emsp;';
     nofalse = true;
     expr1 = document.getElementById("num1").value;
     expr2 = document.getElementById('num2').value;
+    console.log(expr1);
+    console.log(expr2);
+    if(expr1 === "") {
+        nofalse = false;
+        document.getElementById("alert-error1").innerHTML = '*Vui lòng không để trống';
+    }
+    if(expr2 === "") {
+        nofalse = false;
+        document.getElementById("alert-error2").innerHTML = '*Vui lòng không để trống';
+    }
     try {
         result1 = new Function('return ' + expr1)();
      } catch (err) {
@@ -37,7 +51,49 @@ function clickResult() {
     console.log(kqua);
     localStorage.setItem("in ra man hinh", kqua);
 }
-function deleteEle() {
+
+function opposite() {
+    var tmp1 = document.getElementById("num1").value;
+    var tmp2 = document.getElementById("num2").value;
+    if(input1 === true) {
+        timesOpposite1 = timesOpposite1 + 1;
+        if(timesOpposite1 % 2 != 0) {
+            console.log(tmp1);
+            tmp1 = "-(" + tmp1 + ")";
+            console.log(tmp1);
+            document.getElementById("num1").value  = tmp1;
+        } else {
+            tmp1 = tmp1.slice(2,tmp1.length-1);
+            document.getElementById("num1").value  = tmp1;
+        }
+    } else if (input2 === true) {
+        timesOpposite2 = timesOpposite2 + 1;
+        if(timesOpposite2 % 2 != 0) {
+            tmp2 = "-("+tmp2+")";
+            document.getElementById("num2").value  = tmp2;
+        } else {
+            tmp2 = tmp2.slice(2,tmp2.length-1);
+            document.getElementById("num2").value  = tmp2;
+        }
+    }
+}
+
+function deleteOneElement() {
+    let tmp;
+    if(input1 === true) {
+        tmp = document.getElementById("num1").value;
+        tmp = tmp.slice(0,tmp.length - 1);
+        document.getElementById("num1").value  = tmp;
+        console.log(tmp);
+    } else if (input2 === true) {
+        tmp = document.getElementById("num2").value;
+        tmp = tmp.slice(0, tmp.length - 1);
+        document.getElementById("num2").value  = tmp;
+        console.log(tmp);
+    }
+}
+
+function deleteAll() {
     document.getElementById("num1").value = "";
     document.getElementById("num2").value = "";
     document.getElementById("alert-error1").innerHTML = '&emsp;';
@@ -93,4 +149,11 @@ function catchException(value1,value2) {
 function copy() {
     let text = document.getElementById('result-last').value;
     navigator.clipboard.writeText(text);
+    document.getElementById("copy").innerHTML = "Copied";
+    var copybtn = document.getElementById("copy");
+    copybtn.style.cssText = "background-color: #2ecc71;"+
+    "transition: background-color 0.2s;";
+  }
+  function backPrevious() {
+    window.history.back();
   }
