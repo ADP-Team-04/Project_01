@@ -62,3 +62,12 @@ body {
 .copy-btn {
     margin-right: 30px;
 }
+button:hover {
+    background-color: rgb(182, 180, 180);
+    transition: background-color 0.5s;
+}
+
+button:active {
+    background-color: rgb(119, 117, 117);
+    transition: background-color 0.2s;
+}

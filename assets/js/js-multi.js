@@ -5,7 +5,10 @@ var kqua;
 var times = 0;
 var input1 = false;
 var input2 = false;
-var nofalse = true
+var nofalse = true;
+function backToMenu() {
+    
+}
 function clickResult() {
     nofalse = true;
     expr1 = document.getElementById("num1").value;
@@ -49,16 +52,20 @@ function dropKeyBoard() {
     var but1 = document.getElementById("back-click");
     var but2 = document.getElementById("result-click");
     var but3 = document.getElementById("delete-click");
+    var multiBox = document.getElementById("idToAdd");
     if(times%2 != 0) {   
-        board.style.cssText = "display: inline;";
+        board.style.cssText = "display: block; animation: fadeOut 0.65s forwards;";
         but1.style.cssText = "visibility: hidden;";
         but2.style.cssText = "visibility: hidden;";
         but3.style.cssText = "visibility: hidden;";
+        multiBox.style.cssText = "padding-bottom: 170px;"+
+        " background: linear-gradient(180deg, rgb(65,62,62) 20%, rgb(65,62,62) 35%, rgb(174,198,144) 20%, rgb(174,198,144) 20%, rgb(174,198,144) 20%);"      
     } else {
-        board.style.cssText = "display: none;";
+        board.style.cssText = "display:none";
         but1.style.cssText = "visibility: visible;";
         but2.style.cssText = "visibility: visible;";
         but3.style.cssText = "visibility: visible;";
+        multiBox.style.cssText = "padding-bottom: 35px;"
     }
 }
 
@@ -82,3 +89,8 @@ function catchException(value1,value2) {
          }
      }
 }
+
+function copy() {
+    let text = document.getElementById('result-last').value;
+    navigator.clipboard.writeText(text);
+  }
