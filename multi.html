@@ -19,7 +19,7 @@
 
 <body>
     <div class="box-all">
-        <div class="multi-box">
+        <div class="multi-box" id="idToAdd">
             <p class="heading">MULTIPLICATION</p>
             <div class="input-number">
                 <div class="num1-input">
@@ -37,11 +37,11 @@
                     <p id="alert-error2">&emsp;</p>
                 </div>
             </div>
-            <div style="display: none;" id="table-board-box">
+            <div style="display: none" id="table-board-box">
                 <table id="table-board">
                     <tr>
                         <td>
-                            <button onclick="deleteEle()">AC</button>
+                            <button onclick="deleteEle()" style="cursor: pointer;">AC</button>
                         </td>
                         <td>
                             <input class="button-input" type="button" id="pos-neg" value="+/-">
@@ -50,7 +50,7 @@
                             <input class="button-input" type="button" id="div" value="/" onclick="clickInput('/')">
                         </td>
                         <td>
-                            <button><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+                            <button><i class="fa-sharp fa-solid fa-delete-left" style="cursor: pointer;"></i></button>
                         </td>
                     </tr>
                     <tr>
@@ -97,7 +97,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <button onclick="exitResult()"><i class="fa-sharp fa-solid fa-rotate-left"></i></button>
+                            <button onclick="exitResult()"><i class="fa-sharp fa-solid fa-rotate-left" style="cursor: pointer;"></i></button>
                         </td>
                         <td>
                             <input class="button-input" type="button" id="zero" value="0" onclick="clickInput('0')">
@@ -106,7 +106,7 @@
                             <input class="button-input" type="button" id="dot" value="." onclick="clickInput('.')" onclick="clickInput('.')">
                         </td>
                         <td>
-                            <button onclick="clickResult()">=</button>
+                            <button onclick="clickResult()" style="background-color: rgb(215, 140, 98); cursor: pointer;" id="result-board">=</button>
                         </td>
                     </tr>
                 </table>
@@ -117,7 +117,7 @@
                 </button>
             </div>
             <div class="button-box">
-                <button class="back-btn" id="back-click">
+                <button class="back-btn" id="back-click" onclick="">
                     <i class="fa-sharp fa-solid fa-rotate-left"></i>
                 </button>
                 <button class="result-btn" id="result-click" onclick="clickResult()">Result</button>
