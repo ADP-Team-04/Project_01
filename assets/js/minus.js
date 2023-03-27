@@ -36,22 +36,17 @@ function deleteEle(){
     
 }
 function exitResult(){
-    window.location.href= 'minus.html';
+    window.location.href= 'index.html';
 }
 function exitMinus(){
     window.location.href = 'index.html';
 }
-function clickInput(value) {
-    if(input1 === true) {
-        document.getElementById("num1").value += value;
-    } else if (input2 === true) {
-        document.getElementById("num2").value += value;
-    }
+function countinueResult(){
+    window.location.href= 'minus.html';
 }
-function clickInput(value) {
-    if(input1 === true) {
-        document.getElementById("num1").value += value;
-    } else if (input2 === true) {
-        document.getElementById("num2").value += value;
-    }
+function copyResult(){
+    let text = document.getElementById('result-last').value;
+    navigator.clipboard.writeText(text);
+    alert('Copy thành công');
 }
+

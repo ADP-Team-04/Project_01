@@ -16,7 +16,8 @@
                     <input type="text" id="result-last" readonly style="margin: 0 0 20px ;">
                 </div>
                 <div>
-                    <button class="copy-btn" onclick="">Copy</button>
+                    <button class="copy-btn" onclick="copyResult()">Copy</button>
+                    <button class="countinue-btn" onclick="countinueResult()">Continue</button>
                     <button class="exit-btn" onclick="exitResult()">Exit</button>
                 </div>
             </div>
@@ -25,6 +26,7 @@
     <script src ="assets/js/minus.js"></script>
     <script>
         document.getElementById("result-last").value = localStorage.getItem("Input");
+        // document.getElementsByClassName("copy-btn")[0].addEventListener("")
     </script>
 </body>
 </html>
