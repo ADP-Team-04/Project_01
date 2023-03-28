@@ -10,7 +10,7 @@
     
 <body>
     <div class="full-box">
-        <div class="plus-box">
+        <div class="plus-box" id="idToAdd">
             <p class="title">PLUS</p>
             <div class="input-number">
                 <div class="num1-input">
@@ -28,80 +28,79 @@
                     <p class="alert-error2" id="alert-error2" >&emsp;</p>
                 </div>
             </div>
-            <div class="table-box">
-                <table id="table-caculate">
+            <div style="display: none" id="table-board-box">
+                <table id="table-board">
                     <tr>
                         <td>
-                            <button>AC</button>
+                            <button onclick="deleteAll()" style="cursor: pointer;">AC</button>
                         </td>
                         <td>
-                            <button>+/-</button>
+                            <input class="button-input" type="button" id="pos-neg" value="+/-" onclick="opposite()">
                         </td>
                         <td>
-                            <button>/</button>
+                            <input class="button-input" type="button" id="div" value="/" onclick="clickInput('/')">
                         </td>
                         <td>
-                            <button><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+                            <button style="cursor: pointer;" onclick="deleteOneElement()"><i class="fa-sharp fa-solid fa-delete-left"></i></button>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <button>7</button>
+                            <input class="button-input" type="button" id="seven" value="7" onclick="clickInput('7')">
                         </td>
                         <td>
-                            <button>8</button>
+                            <input class="button-input" type="button" id="eight" value="8" onclick="clickInput('8')">
                         </td>
                         <td>
-                            <button>9</button>
+                            <input class="button-input" type="button" id="nine" value="9" onclick="clickInput('9')">
                         </td>
                         <td>
-                            <button>X</button>
+                            <input class="button-input" type="button" id="mul" value="x" onclick="clickInput('*')">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <button>4</button>
+                            <input class="button-input" type="button" id="four" value="4" onclick="clickInput('4')">
                         </td>
                         <td>
-                            <button>5</button>
+                            <input class="button-input" type="button" id="five" value="5" onclick="clickInput('5')">
                         </td>
                         <td>
-                            <button>6</button>
+                            <input class="button-input" type="button" id="six" value="6" onclick="clickInput('6')">
                         </td>
                         <td>
-                            <button>-</button>
+                            <input class="button-input" type="button" id="minus" value="-" onclick="clickInput('-')">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <button>1</button>
+                            <input class="button-input" type="button" id="one" value="1" onclick="clickInput('1')">
                         </td>
                         <td>
-                            <button>2</button>
+                            <input class="button-input" type="button" id="two" value="2" onclick="clickInput('2')">
                         </td>
                         <td>
-                            <button>3</button>
+                            <input class="button-input" type="button" id="three" value="3" onclick="clickInput('3')">
                         </td>
                         <td>
-                            <button>+</button>
+                            <input class="button-input" type="button" id="plus" value="+" onclick="clickInput('+')">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <button>AC</button>
+                            <button onclick="exitResult()"><i class="fa-sharp fa-solid fa-rotate-left" style="cursor: pointer;"></i></button>
                         </td>
                         <td>
-                            <button>+/-</button>
+                            <input class="button-input" type="button" id="zero" value="0" onclick="clickInput('0')">
                         </td>
                         <td>
-                            <button>/</button>
+                            <input class="button-input" type="button" id="dot" value="." onclick="clickInput('.')" onclick="clickInput('.')">
                         </td>
                         <td>
-                            <button><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+                            <button onclick="clickResult()" style="background-color: rgb(215, 140, 98); cursor: pointer;" id="result-board">=</button>
                         </td>
+                        
                     </tr>
-                    
-
                 </table>
             </div>
             <div class="keyboard-box">
@@ -123,9 +122,9 @@
         </div>
     </div>
     <script src="assets/js/plusJs.js"></script>
-    <!-- <script>
+    <script>
         document.getElementById('num1').addEventListener('click',function() {input1 = true; input2 = false;});
         document.getElementById('num2').addEventListener('click',function() {input1 = false; input2 = true;});
-    </script> -->
+    </script>
 </body>
 </html>

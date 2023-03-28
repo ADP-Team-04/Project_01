@@ -56,21 +56,27 @@ body{
 .alert-error1,.alert-error2{
     margin-top: 0px;
     margin-bottom: 10px;
-    margin-left: 50px;
+    margin-left: 25px;
     color: red;
     font-weight: normal;
     font-size: 10px;
 }
 .keyboard-box{
-    text-align: right; 
-    margin-top: -2.5px; 
+     
+    text-align: right;
+    margin-top: -1px;
     margin-right: 20px;
-    border: none; 
-    border-radius: 5px;  
+    border: none;
+    border-radius: 5px;
+   
 }
 .keyboard{
+    position: relative;
     border: none;
+    height: 23px; 
+    width: 40px;
     border-radius: 0px 0px 3px 3px; 
+    
 }
 .button-box{
     display: flex;
@@ -107,10 +113,28 @@ button:hover{
     border-radius: 5px;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    letter-spacing: 0.5px;
-    
+    letter-spacing: 0.5px; 
 }
-.table-box{
-    display: none;
+
+#table-board-box{
+    position: absolute;
+    width: 300px;
+    height: 175px;
+    background-color: rgb(119, 131, 92);
+    border-radius: 5px;
+}
+table{
+    position: absolute;
+    width: 280px;
+    height: 160px;
+    margin: 0px auto;
+}
+.button-input, button{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
 }
 
