@@ -76,3 +76,7 @@ body {
 .copy-btn {
     margin-right: 30px;
 }
+button:hover {
+    background-color: rgb(182, 180, 180);
+    transition: background-color 0.5s;
+}

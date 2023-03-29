@@ -105,31 +105,31 @@ function dropKeyBoard() {
     }
 }
 
-function opposite() {
-    var tmp1 = document.getElementById("num1").value;
-    var tmp2 = document.getElementById("num2").value;
-    if(input1 === true) {
-        timesOpposite1 = timesOpposite1 + 1;
-        if(timesOpposite1 % 2 != 0) {
-            console.log(tmp1);
-            tmp1 = "-(" + tmp1 + ")";
-            console.log(tmp1);
-            document.getElementById("num1").value  = tmp1;
-        } else {
-            tmp1 = tmp1.slice(2,tmp1.length-1);
-            document.getElementById("num1").value  = tmp1;
-        }
-    } else if (input2 === true) {
-        timesOpposite2 = timesOpposite2 + 1;
-        if(timesOpposite2 % 2 != 0) {
-            tmp2 = "-("+tmp2+")";
-            document.getElementById("num2").value  = tmp2;
-        } else {
-            tmp2 = tmp2.slice(2,tmp2.length-1);
-            document.getElementById("num2").value  = tmp2;
+    function opposite() {
+        var tmp1 = document.getElementById("num1").value;
+        var tmp2 = document.getElementById("num2").value;
+        if(input1 === true) {
+            timesOpposite1 = timesOpposite1 + 1;
+            if(timesOpposite1 % 2 != 0) {
+                console.log(tmp1);
+                tmp1 = "-(" + tmp1 + ")";
+                console.log(tmp1);
+                document.getElementById("num1").value  = tmp1;
+            } else {
+                tmp1 = tmp1.slice(2,tmp1.length-1);
+                document.getElementById("num1").value  = tmp1;
+            }
+        } else if (input2 === true) {
+            timesOpposite2 = timesOpposite2 + 1;
+            if(timesOpposite2 % 2 != 0) {
+                tmp2 = "-("+tmp2+")";
+                document.getElementById("num2").value  = tmp2;
+            } else {
+                tmp2 = tmp2.slice(2,tmp2.length-1);
+                document.getElementById("num2").value  = tmp2;
+            }
         }
     }
-}
 function clickInput(value) {
     if(input1 === true) {
         document.getElementById("num1").value += value;

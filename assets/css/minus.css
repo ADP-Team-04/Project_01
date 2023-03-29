@@ -7,7 +7,7 @@ body {
 .all {
     width: 70vw;
     min-height: 50vh;
-    margin: 0 auto;
+    margin: auto;
 }
 .minus {
     margin: 0px auto;
@@ -95,7 +95,7 @@ body {
 }
 .keyboard-down {
     width: 50px;
-    background-color: rgb(209,215,195);
+    background-color: rgb(217,217,217);
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -114,11 +114,28 @@ body {
     width: 288px;
     height: auto;
     margin: 0px auto;
-    background-color: rgb(119, 131, 92);
+    background-color: rgb(119,131,92);
     padding: 10px 10px;
     border-radius: 10px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+}
+button:hover {
+    background-color: rgb(182, 180, 180);
+    transition: background-color 0.5s;
+}
+button:active {
+    background-color: rgb(122, 121, 121);
+    transition: background-color 0.2s;
+}
+input[type='button']:hover {
+    background-color: rgb(182, 180, 180);
+    transition: background-color 0.5s;
 }
 
+input[type='button']:active {
+    background-color: rgb(119, 117, 117);
+    transition: background-color 0.2s;
+}
 .button.isHiden{
     display: none;
 }
