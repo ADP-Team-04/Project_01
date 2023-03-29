@@ -6,6 +6,8 @@ var times = 0;
 var input1 = false;
 var input2 = false;
 var nofalse = true;
+var timesOpposite1 = 0;
+var timesOpposite2 = 0;
 function clickResult() {
     document.getElementById("alert-error1").innerHTML = '&emsp;';
     document.getElementById("alert-error2").innerHTML = '&emsp;';
@@ -83,6 +85,31 @@ function show_keyboard() {
         but2.style.cssText = "visibility: visible;";
         but3.style.cssText = "visibility: visible;";
         plusbox.style.cssText = "padding-bottom: 35px;"
+    }
+}
+function opposite() {
+    var tmp1 = document.getElementById("num1").value;
+    var tmp2 = document.getElementById("num2").value;
+    if(input1 === true) {
+        timesOpposite1 = timesOpposite1 + 1;
+        if(timesOpposite1 % 2 != 0) {
+            console.log(tmp1);
+            tmp1 = "-(" + tmp1 + ")";
+            console.log(tmp1);
+            document.getElementById("num1").value  = tmp1;
+        } else {
+            tmp1 = tmp1.slice(2,tmp1.length-1);
+            document.getElementById("num1").value  = tmp1;
+        }
+    } else if (input2 === true) {
+        timesOpposite2 = timesOpposite2 + 1;
+        if(timesOpposite2 % 2 != 0) {
+            tmp2 = "-("+tmp2+")";
+            document.getElementById("num2").value  = tmp2;
+        } else {
+            tmp2 = tmp2.slice(2,tmp2.length-1);
+            document.getElementById("num2").value  = tmp2;
+        }
     }
 }
 function clickInput(value) {
