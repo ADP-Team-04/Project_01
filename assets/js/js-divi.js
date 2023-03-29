@@ -44,12 +44,16 @@ function clickResult() {
         document.getElementById("alert-error2").innerHTML = '*Không đúng định dạng số';
         nofalse = false;
      }
+     if(result2 === 0) {
+        nofalse = false;
+        document.getElementById("alert-error2").innerHTML = '*Number 2 không được nhập giá trị 0';
+    } 
     if(nofalse) {
-        window.location.href = 'resultMulti.html';
+        window.location.href = 'resultDivi.html';
     }
-    kqua = result1*result2;
+    kqua = result1/result2;
     console.log(kqua);
-    localStorage.setItem("in ra man hinh", kqua);
+    localStorage.setItem("in ra ket qua", kqua);
 }
 
 function opposite() {
@@ -100,7 +104,7 @@ function deleteAll() {
     document.getElementById("alert-error2").innerHTML = '&emsp;';
 }
 function exitResult() {
-    window.location.href = 'multi.html';
+    window.location.href = 'divi.html';
 }
 function dropKeyBoard() {
     times++;
