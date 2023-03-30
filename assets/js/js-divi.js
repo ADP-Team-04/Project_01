@@ -15,8 +15,8 @@ function clickResult() {
     document.getElementById("alert-error1").innerHTML = '&emsp;';
     document.getElementById("alert-error2").innerHTML = '&emsp;';
     nofalse = true;
-    expr1 = document.getElementById("num1").value;
-    expr2 = document.getElementById('num2').value;
+    expr1 = document.getElementById('num1').value.trim();
+    expr2 = document.getElementById('num2').value.trim();
     console.log(expr1);
     console.log(expr2);
     if(expr1 === "") {
@@ -38,16 +38,16 @@ function clickResult() {
             document.getElementById("alert-error2").innerHTML = "*Không đúng định dạng số";
          }
      }
-     try {
+     try { 
         result2 = new Function('return ' + expr2)();
+        if(result2 === 0) {
+            nofalse = false;
+            document.getElementById("alert-error2").innerHTML = '*Number 2 không được nhập giá trị 0';
+        }
      } catch (err) {
         document.getElementById("alert-error2").innerHTML = '*Không đúng định dạng số';
         nofalse = false;
      }
-     if(result2 === 0) {
-        nofalse = false;
-        document.getElementById("alert-error2").innerHTML = '*Number 2 không được nhập giá trị 0';
-    } 
     if(nofalse) {
         window.location.href = 'resultDivi.html';
     }

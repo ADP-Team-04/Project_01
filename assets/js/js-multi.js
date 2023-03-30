@@ -6,8 +6,8 @@ var times = 0;
 var input1 = false;
 var input2 = false;
 var nofalse = true;
-var timesOpposite1 = 0;
-var timesOpposite2 = 0;
+let timesOpposite1 = 0;
+let timesOpposite2 = 0;
 function backToMenu() {
     window.location.href = "index.html";
 }
@@ -15,8 +15,8 @@ function clickResult() {
     document.getElementById("alert-error1").innerHTML = '&emsp;';
     document.getElementById("alert-error2").innerHTML = '&emsp;';
     nofalse = true;
-    expr1 = document.getElementById("num1").value;
-    expr2 = document.getElementById('num2').value;
+    expr1 = document.getElementById("num1").value.trim();
+    expr2 = document.getElementById('num2').value.trim();
     console.log(expr1);
     console.log(expr2);
     if(expr1 === "") {
@@ -29,6 +29,7 @@ function clickResult() {
     }
     try {
         result1 = new Function('return ' + expr1)();
+        console.log("result     "+result1);
      } catch (err) {
         document.getElementById("alert-error1").innerHTML = '*Không đúng định dạng số';
         nofalse = false;
@@ -44,11 +45,11 @@ function clickResult() {
         document.getElementById("alert-error2").innerHTML = '*Không đúng định dạng số';
         nofalse = false;
      }
-    if(nofalse) {
-        window.location.href = 'resultMulti.html';
-    }
-    kqua = result1*result2;
+     kqua = result1*result2;
     console.log(kqua);
+    if(nofalse) {
+        // window.location.href = 'resultMulti.html';
+    }
     localStorage.setItem("in ra man hinh", kqua);
 }
 
