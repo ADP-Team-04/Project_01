@@ -3,6 +3,7 @@ var result1;
 var result2;
 var kqua;
 var times = 0;
+
 var input1 = false;
 var input2 = false;
 var nofalse = true;
@@ -16,6 +17,7 @@ function clickResult() {
     num2= document.getElementById('num2').value.trim();
     console.log(num1);
     console.log(num2);
+    var regex=/[a-z@#$!%":|~`?:&]/;
     if(num1 === "" ) {
         nofalse = false;
         document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';
@@ -24,23 +26,17 @@ function clickResult() {
         nofalse = false;
         document.getElementById("alert-error2").innerHTML = '*Please do not leave it blank';
     }
-    try {
-        result1 = new Function('return ' + num1)();
-     } catch (err) {
+    if(regex.test(num1)==true){
         document.getElementById("alert-error1").innerHTML = '*please enter again';
         nofalse = false;
-        try {
-            result2 = new Function('return ' + num2)();
-         } catch (err) {
-            document.getElementById("alert-error2").innerHTML = "*please enter again";
-         }
-     }
-     try {
-        result2 = new Function('return ' + num2)();
-     } catch (err) {
+    } else {result1= parseFloat(num1)}
+         
+    
+    if(regex.test(num2)==true){
         document.getElementById("alert-error2").innerHTML = '*please enter again';
         nofalse = false;
-     }
+    } else {result2= parseFloat(num2);}
+        
     if(nofalse) {
         window.location.href = 'resultplus.html';
     }
@@ -51,6 +47,9 @@ function clickResult() {
 function deleteEle() {
     document.getElementById("num1").value = "";
     document.getElementById("num2").value = "";
+    document.getElementById("alert-error1").innerHTML='&emsp;';
+    document.getElementById("alert-error2").innerHTML='&emsp;';
+    
 }
 function clickreturn(){
     window.location.href = 'index.html';
@@ -59,7 +58,8 @@ function clickContinue(){
     window.location.href = 'plus.html';
 }
 function clickCopy(){
-    let text = document.getElementById|('result-out').value;
+    let text = document.getElementById('result-out').value;
+    console.log(text);
     navigator.clipboard.writeText(text);
     alert('Result is copied')
 }
@@ -70,12 +70,11 @@ function show_keyboard() {
     var but2 = document.getElementById("result-click");
     var but3 = document.getElementById("delete-click");
     var plusbox = document.getElementById("idToAdd");
-    var keyboard= document.getElementById("keyboard")
     if(times%2 != 0) {   
         board.style.cssText = "display: block; animation: fadeOut 0.65s forwards;";
-        but1.style.cssText = "visibility: hidden;";
-        but2.style.cssText = "visibility: hidden;";
-        but3.style.cssText = "visibility: hidden;";
+        but1.style.cssText = "display: none;";
+        but2.style.cssText = "display: none;";
+        but3.style.cssText = "display: none;";
         plusbox.style.cssText = "padding-bottom: 170px;"+
         " background: linear-gradient(180deg, rgb(65,62,62) 20%, rgb(65,62,62) 35%, rgb(174,198,144) 20%, rgb(174,198,144) 20%, rgb(174,198,144) 20%);"    
         

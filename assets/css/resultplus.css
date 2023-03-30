@@ -1,10 +1,10 @@
 body{
     margin: 0;
-    background-color: rgb(223, 235, 227);
+    background-color: #54695C;
     font-family: Inter;
 }
 .full-box{
-    letter-spacing: 5px;
+    
     width: 50vw;
     min-height: 50vh;
     margin: 0 auto;
@@ -16,8 +16,10 @@ body{
     font-size: 35px;
     margin-bottom: 10px;
     margin-top: auto;
-    font-weight: bold;
-    
+    font-weight: 600;
+    letter-spacing: 10px;
+    align-items: center;
+    padding-left: 10px;
 }
 .result-box{
     margin: 0px auto;
