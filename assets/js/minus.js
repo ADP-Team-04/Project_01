@@ -12,7 +12,7 @@ function clickResult(){
     y = document.getElementById('num2').value.trim();
     console.log(x);
     console.log(y);
-    var regex=/[a-z@#$!%":|~`?:&]/;
+    var regex=/^[\d\*\-\+\\]+$/;
     var t =/^[\/*]/
     var div0 =/\/0/
     x = x.replaceAll(" ",''); 
@@ -26,16 +26,17 @@ function clickResult(){
         check = false;
         document.getElementById("alert-error2").innerHTML = '*Please do not leave it blank';
     }
-    if(regex.test(x) == true || t.test(x)|| div0.test(x)){
+    if(regex.test(x) == false || t.test(x)|| div0.test(x)){
         document.getElementById("alert-error1").innerHTML = 'Please enter again';
         check = false;
     }else{ 
         
-        tempX = new Function('return ' + x)();
+        // tempX = new Function('return ' + x)();
+        tempX = eval(x);
         console.log(tempX)
     }
 
-    if(regex.test(y) == true || t.test(y)|| div0.test(y)){
+    if(regex.test(y) == false || t.test(y)|| div0.test(y)){
         document.getElementById("alert-error2").innerHTML = 'Please enter again';
         check = false;
     }else{
