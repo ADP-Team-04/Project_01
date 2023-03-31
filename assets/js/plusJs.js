@@ -17,7 +17,7 @@ function clickResult() {
     num2= document.getElementById('num2').value.trim();
     console.log(num1);
     console.log(num2);
-    var regex=/[a-z@#$!%":|~`?:&]/;
+    var regex=/[^\d +*/().-]/;
     var t=/^[\/*]/
     var div0=/\/0/
     if(num1 === "" ) {
@@ -32,9 +32,7 @@ function clickResult() {
         document.getElementById("alert-error1").innerHTML = '*please enter again';
         nofalse = false;
     } else { result1 = new Function('return ' + num1)();}
-         
-    
-    if(regex.test(num2|| t.test(num1) || div0.test(num1))==true){
+    if(regex.test(num2)==true|| t.test(num2) || div0.test(num2)){
         document.getElementById("alert-error2").innerHTML = '*please enter again';
         nofalse = false;
     } else {result2 = new Function('return ' + num2)();}
