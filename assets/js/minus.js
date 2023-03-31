@@ -12,32 +12,36 @@ function clickResult(){
     y = document.getElementById('num2').value.trim();
     console.log(x);
     console.log(y);
+    var regex=/[a-z@#$!%":|~`?:&]/;
+    var t =/^[\/*]/
+    var div0 =/\/0/
+    x = x.replaceAll(" ",''); 
+    y = y.replaceAll(" ",''); 
+    console.log(x)
     if(x=== "") {
         check = false;
-        document.getElementById("alert-error1").innerHTML = '*Vui lòng không để trống';
+        document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';
     }
     if(y=== "") {
         check = false;
-        document.getElementById("alert-error2").innerHTML = '*Vui lòng không để trống';
+        document.getElementById("alert-error2").innerHTML = '*Please do not leave it blank';
     }
-    try {
+    if(regex.test(x) == true || t.test(x)|| div0.test(x)){
+        document.getElementById("alert-error1").innerHTML = 'Please enter again';
+        check = false;
+    }else{ 
+        
         tempX = new Function('return ' + x)();
-     } catch (err) {
-        document.getElementById("alert-error1").innerHTML = 'Không đúng định dạng số';
+        console.log(tempX)
+    }
+
+    if(regex.test(y) == true || t.test(y)|| div0.test(y)){
+        document.getElementById("alert-error2").innerHTML = 'Please enter again';
         check = false;
-        try {
-            tempY = new Function('return ' + y)();
-         } catch (err) {
-            document.getElementById("alert-error2").innerHTML = "Không đúng định dạng số";
-         }
-     }
-     try {
+    }else{
         tempY = new Function('return ' + y)();
-     } catch (err) {
-        document.getElementById("alert-error2").innerHTML = 'Không đúng định dạng số';
-        check = false;
-     }
-     minus = tempX - tempY ;
+    }
+     minus = (tempX - tempY).toFixed(2) ;
      console.log(minus);
      localStorage.setItem("Input", minus); 
     if(check) {
@@ -85,23 +89,12 @@ function dropKeyBoard() {
     var board =document.querySelector(".keyboard-table-box");
     let button = document.querySelector(".button");
     button.classList.toggle("isHiden");
-    // var but1 = document.getElementById("back-click");
-    // var but2 = document.getElementById("result-click");
-    // var but3 = document.getElementById("delete-click");
+
     var minusBox = document.getElementById("idToAdd");
     if(time%2 != 0) {   
-        board.style = "display: block;";
-        // but1.style = "visibility: hidden;";
-        // but2.style = "visibility: hidden;";
-        // but3.style = "visibility: hidden;";
-        // minusBox.style = "padding-bottom: 170px;"+
-        // " background: linear-gradient(180deg, rgb(65,62,62) 20%, rgb(65,62,62) 35%, rgb(174,198,144) 20%, rgb(174,198,144) 20%, rgb(174,198,144) 20%);"      
+        board.style = "display: block;";     
     } else {
         board.style = "display:none";
-        // but1.style = "visibility: visible;";
-        // but2.style = "visibility: visible;";
-        // but3.style = "visibility: visible;";
-        // minus.style = "padding-bottom: 35px;"
     }
 }
 
@@ -142,11 +135,11 @@ function catchException(value1,value2) {
     try {
         value1 = new Function('return ' + x)();
      } catch (err) {
-        document.getElementById("alert-error1").innerHTML = '*Không đúng định dạng số';
+        document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';
         try {
             value2 = new Function('return ' + y)();
          } catch (err) {
-            document.getElementById("alert-error2").innerHTML = "*Không đúng định dạng số";
+            document.getElementById("alert-error2").innerHTML = "*Please do not leave it blank";
          }
      }
 }

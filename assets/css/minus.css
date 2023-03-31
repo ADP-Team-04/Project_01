@@ -42,9 +42,12 @@ body {
     font-weight: bold;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 01);
 }
-
+.inputNumber{
+    position: relative;
+    z-index: 2;
+}
 #num1, #num2{
     margin-left: 5px;
     height: 25px;
@@ -53,6 +56,7 @@ body {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
+    font-family: Inter;
 }
 
 .back-btn,.delete-btn {
@@ -97,10 +101,11 @@ body {
     width: 50px;
     background-color: rgb(217,217,217);
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     margin-bottom: 10px;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 3px 4px rgba(0, 0, 0, 1); */
 }
+
 .button-input, button {
     width: 60px;
     height: 30px;
@@ -116,8 +121,14 @@ body {
     margin: 0px auto;
     background-color: rgb(119,131,92);
     padding: 10px 10px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 1);
+    margin-top: -10px;
+    padding-top: 15px;
+}
+.keyboard-table{
+    position: relative;
+    z-index: 1;
 }
 button:hover {
     background-color: rgb(182, 180, 180);
