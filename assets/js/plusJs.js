@@ -18,6 +18,8 @@ function clickResult() {
     console.log(num1);
     console.log(num2);
     var regex=/[a-z@#$!%":|~`?:&]/;
+    var t=/^[\/*]/
+    var div0=/\/0/
     if(num1 === "" ) {
         nofalse = false;
         document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';
@@ -26,16 +28,16 @@ function clickResult() {
         nofalse = false;
         document.getElementById("alert-error2").innerHTML = '*Please do not leave it blank';
     }
-    if(regex.test(num1)==true){
+    if(regex.test(num1)==true || t.test(num1) || div0.test(num1)){
         document.getElementById("alert-error1").innerHTML = '*please enter again';
         nofalse = false;
-    } else {result1= parseFloat(num1)}
+    } else { result1 = new Function('return ' + num1)();}
          
     
-    if(regex.test(num2)==true){
+    if(regex.test(num2|| t.test(num1) || div0.test(num1))==true){
         document.getElementById("alert-error2").innerHTML = '*please enter again';
         nofalse = false;
-    } else {result2= parseFloat(num2);}
+    } else {result2 = new Function('return ' + num2)();}
         
     if(nofalse) {
         window.location.href = 'resultplus.html';

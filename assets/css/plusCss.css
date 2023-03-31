@@ -93,7 +93,7 @@ body{
     height: 35px;
     font-size: 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer; 
 }
@@ -110,20 +110,23 @@ button:hover{
     font-size: 20px;
     font-family: Inter;
     font-weight: normal;
-    letter-spacing: 0.5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     letter-spacing: 4px; 
 }
 
 #table-board-box{
-    min-width: 300px;
+    min-width: 289px;
     min-height: 180px;
     background-color: rgb(119, 131, 92);
     border-radius: 0px 0px 5px 5px;
-    /* margin-top: -5px; */
+    margin-top: -5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 #table-board-box{
     z-index: 1;
@@ -131,7 +134,7 @@ button:hover{
 }
 table{
     padding-top: 7px;
-    min-width: 300px;
+    min-width: 289px;
     min-height: 180px;
     margin: 0px auto;
 
