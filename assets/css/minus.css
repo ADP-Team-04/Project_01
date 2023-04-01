@@ -86,17 +86,17 @@ body {
     margin-top: 3px;
     margin-bottom: 10px;
     margin-left: 50px;
-    color: red;
+    color: 	rgb(	255, 82, 99);
     font-weight: bold;
-    font-size: 15px;
+    font-size: 13px;
 }
 #alert-error2 {
     margin-top: 3px;
     margin-bottom: 10px;
     margin-left: 50px;
-    color: red;
+    color: 	rgb(	255, 82, 99);
     font-weight: bold;
-    font-size: 15px;
+    font-size: 13px;
 }
 .keyboard-down {
     width: 50px;
