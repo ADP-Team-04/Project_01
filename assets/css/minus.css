@@ -32,13 +32,13 @@ body {
     font-size: 25px;
 }
 .inputNumber {
-    margin-top: 20px;
+    margin-top: 21px;
     margin-bottom: auto;
     border: 1px solid;
     padding: 20px 5px 10px 5px;
     background-color: rgb(209,215,195);
     font-family: Inter;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     border: none;
     border-radius: 10px;
@@ -50,11 +50,12 @@ body {
 }
 #num1, #num2{
     margin-left: 5px;
+    margin-top: 2px;
     height: 25px;
     border: none;
     border-radius: 5px;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     font-family: Inter;
 }
@@ -82,26 +83,26 @@ body {
     cursor: pointer;
 }
 #alert-error1 {
-    margin-top: 5px;
-    margin-bottom: 0px;
-    margin-left: 50px;
-    color: red;
-    font-weight: normal;
-    font-size: 15px;
-}
-#alert-error2 {
-    margin-top: 5px;
+    margin-top: 3px;
     margin-bottom: 10px;
     margin-left: 50px;
     color: red;
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 15px;
+}
+#alert-error2 {
+    margin-top: 3px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    color: red;
+    font-weight: bold;
     font-size: 15px;
 }
 .keyboard-down {
     width: 50px;
     background-color: rgb(217,217,217);
     border: none;
-    border-radius: 2px;
+    border-radius: 0px 0px 3px 3px;
     margin-bottom: 10px;
     /* box-shadow: 0px 3px 4px rgba(0, 0, 0, 1); */
 }

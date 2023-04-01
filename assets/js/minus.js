@@ -12,9 +12,9 @@ function clickResult(){
     y = document.getElementById('num2').value.trim();
     console.log(x);
     console.log(y);
-    var regex=/^[\d\*\-\+\\]+$/;
-    var t =/^[\/*]/
-    var div0 =/\/0/
+    var regex=/[^\d +*/().-]/;
+    var t =/^[\/*]/;
+    var div0 =/\/0/;
     x = x.replaceAll(" ",''); 
     y = y.replaceAll(" ",''); 
     console.log(x)
@@ -26,25 +26,36 @@ function clickResult(){
         check = false;
         document.getElementById("alert-error2").innerHTML = '*Please do not leave it blank';
     }
-    if(regex.test(x) == false || t.test(x)|| div0.test(x)){
+    if(regex.test(x) == true || t.test(x)|| div0.test(x)){
         document.getElementById("alert-error1").innerHTML = 'Please enter again';
         check = false;
-    }else{ 
-        
-        // tempX = new Function('return ' + x)();
-        tempX = eval(x);
-        console.log(tempX)
     }
-
-    if(regex.test(y) == false || t.test(y)|| div0.test(y)){
+    if(regex.test(y) == true || t.test(y)|| div0.test(y)){
         document.getElementById("alert-error2").innerHTML = 'Please enter again';
         check = false;
-    }else{
-        tempY = new Function('return ' + y)();
     }
-     minus = (tempX - tempY).toFixed(2) ;
-     console.log(minus);
-     localStorage.setItem("Input", minus); 
+    
+    try{
+        tempX = new Function('return ' + x)();
+    }catch (err){
+        document.getElementById("alert-error1").innerHTML = 'Please enter again';
+        check = false;
+        try{
+            tempY = new Function('return ' + y)();
+        }catch (err){
+            document.getElementById("alert-error2").innerHTML = 'Please enter again';
+            check = false;
+        }
+    }
+    try{
+        tempY = new Function('return ' + y)();
+    }catch(err){
+        document.getElementById("alert-error2").innerHTML = 'Please enter again';
+        check = false;
+    }
+    minus = (tempX - tempY).toFixed(2) ;
+    console.log(minus);
+    localStorage.setItem("Input", minus); 
     if(check) {
         window.location.href = 'resultMinus.html';
     }
