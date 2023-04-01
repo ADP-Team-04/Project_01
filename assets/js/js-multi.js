@@ -6,8 +6,8 @@ var times = 0;
 var input1 = false;
 var input2 = false;
 var nofalse = true;
-var timesOpposite1 = 0;
-var timesOpposite2 = 0;
+let timesOpposite1 = 0;
+let timesOpposite2 = 0;
 function backToMenu() {
     window.location.href = "index.html";
 }
@@ -15,10 +15,18 @@ function clickResult() {
     document.getElementById("alert-error1").innerHTML = '&emsp;';
     document.getElementById("alert-error2").innerHTML = '&emsp;';
     nofalse = true;
-    expr1 = document.getElementById("num1").value;
-    expr2 = document.getElementById('num2').value;
+    expr1 = document.getElementById("num1").value.trim();
+    expr2 = document.getElementById('num2').value.trim();
     console.log(expr1);
     console.log(expr2);
+    if(expr1 === 'NaN' || expr1 === 'undefined' || expr1 === 'null' || expr1 === 'true' || expr1 === 'false' || expr1.includes('/0') === true || expr1 === 'Infinity') {
+        document.getElementById("alert-error1").innerHTML = '*Không đúng định dạng số';
+        nofalse = false;
+    }
+    if(expr2 === 'NaN' || expr2 === 'undefined' || expr2 === 'null' || expr2 === 'true' || expr2 === 'false' || expr2.includes('/0') === true || expr2 === 'Infinity') {
+        document.getElementById("alert-error2").innerHTML = '*Không đúng định dạng số';
+        nofalse = false;
+    }
     if(expr1 === "") {
         nofalse = false;
         document.getElementById("alert-error1").innerHTML = '*Vui lòng không để trống';
@@ -29,6 +37,7 @@ function clickResult() {
     }
     try {
         result1 = new Function('return ' + expr1)();
+        console.log("result     "+result1);
      } catch (err) {
         document.getElementById("alert-error1").innerHTML = '*Không đúng định dạng số';
         nofalse = false;
@@ -44,11 +53,11 @@ function clickResult() {
         document.getElementById("alert-error2").innerHTML = '*Không đúng định dạng số';
         nofalse = false;
      }
+     kqua = result1*result2;
+    console.log(kqua);
     if(nofalse) {
         window.location.href = 'resultMulti.html';
     }
-    kqua = result1*result2;
-    console.log(kqua);
     localStorage.setItem("in ra man hinh", kqua);
 }
 
@@ -57,22 +66,40 @@ function opposite() {
     var tmp2 = document.getElementById("num2").value;
     if(input1 === true) {
         timesOpposite1 = timesOpposite1 + 1;
-        if(timesOpposite1 % 2 != 0) {
-            console.log(tmp1);
+        if(timesOpposite1 % 2 === 0 && tmp1.charAt(tmp1.length-1) === ')') {
+            console.log(timesOpposite1);
+            tmp1 = tmp1.slice(2,tmp1.length-1);
+            document.getElementById("num1").value  = tmp1;
+        } else if(timesOpposite1 % 2 != 0 && tmp1.charAt(tmp1.length-1) != ')'){
+            console.log(timesOpposite1);
             tmp1 = "-(" + tmp1 + ")";
-            console.log(tmp1);
+            document.getElementById("num1").value  = tmp1;
+        } else if (tmp1.charAt(tmp1.length-1) === ')') {
+            console.log(timesOpposite1);
+            tmp1 = tmp1.slice(2,tmp1.length-1);
             document.getElementById("num1").value  = tmp1;
         } else {
-            tmp1 = tmp1.slice(2,tmp1.length-1);
+            console.log(timesOpposite1);
+            tmp1 = "-(" + tmp1 + ")";
             document.getElementById("num1").value  = tmp1;
         }
     } else if (input2 === true) {
         timesOpposite2 = timesOpposite2 + 1;
-        if(timesOpposite2 % 2 != 0) {
+        if(timesOpposite2 % 2 === 0 && tmp2.charAt(tmp2.length-1) === ')') {
+            console.log(timesOpposite2);
+            tmp2 = tmp2.slice(2,tmp2.length-1);
+            document.getElementById("num2").value  = tmp2;
+        } else if(timesOpposite2 % 2 != 0 && tmp2.charAt(tmp2.length-1) != ')'){
+            console.log(timesOpposite2);
             tmp2 = "-("+tmp2+")";
             document.getElementById("num2").value  = tmp2;
-        } else {
+        } else if (tmp2.charAt(tmp2.length-1) === ')') {
+            onsole.log(timesOpposite2);
             tmp2 = tmp2.slice(2,tmp2.length-1);
+            document.getElementById("num2").value  = tmp2;
+        } else {
+            console.log(timesOpposite2);
+            tmp2 = "-("+tmp2+")";
             document.getElementById("num2").value  = tmp2;
         }
     }
