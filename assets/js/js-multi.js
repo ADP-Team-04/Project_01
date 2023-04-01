@@ -13,6 +13,9 @@ function backToMenu() {
 }
 function clickResult() {
     var regex = /^[a-zA-Z]+$/;
+    var regex=/[^\d +*/().-]/;
+    var t=/^[\/*]/;
+    var div0=/\/0/;
     document.getElementById("alert-error1").innerHTML = '&emsp;';
     document.getElementById("alert-error2").innerHTML = '&emsp;';
     nofalse = true;
@@ -21,39 +24,39 @@ function clickResult() {
     console.log(expr1);
     console.log(expr2);
 
-    if(expr1.match(regex)) {
-        document.getElementById("alert-error1").innerHTML = '*Không đúng định dạng số';
+    if(expr1.match(regex) || expr1.match(t) || expr1.match(div0)) {
+        document.getElementById("alert-error1").innerHTML = '*Please enter again';
         nofalse = false;
     }
-    if(expr2.match(regex)) {
-        document.getElementById("alert-error2").innerHTML = '*Không đúng định dạng số';
+    if(expr2.match(regex) || expr2.match(t) || expr2.match(div0)) {
+        document.getElementById("alert-error2").innerHTML = '*Please enter again';
         nofalse = false;
     }
     
     if(expr1 === '') {
         nofalse = false;
-        document.getElementById("alert-error1").innerHTML = '*Vui lòng không để trống';
+        document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';;
     }
     if(expr2 === '') {
         nofalse = false;
-        document.getElementById("alert-error2").innerHTML = '*Vui lòng không để trống';
+        document.getElementById("alert-error2").innerHTML = '*Please do not leave it blank';;
     }
     try {
         result1 = new Function('return ' + expr1)();
         console.log("result     "+result1);
      } catch (err) {
-        document.getElementById("alert-error1").innerHTML = '*Không đúng định dạng số';
+        document.getElementById("alert-error1").innerHTML = '*Please enter again';
         nofalse = false;
         try {
             result2 = new Function('return ' + expr2)();
          } catch (err) {
-            document.getElementById("alert-error2").innerHTML = "*Không đúng định dạng số";
+            document.getElementById("alert-error2").innerHTML = '*Please enter again';
          }
      }
      try {
         result2 = new Function('return ' + expr2)();
      } catch (err) {
-        document.getElementById("alert-error2").innerHTML = '*Không đúng định dạng số';
+        document.getElementById("alert-error2").innerHTML = '*Please enter again';
         nofalse = false;
      }
      kqua = result1*result2;
