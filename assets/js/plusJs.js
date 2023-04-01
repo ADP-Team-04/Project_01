@@ -59,9 +59,11 @@ function clickContinue(){
 }
 function clickCopy(){
     let text = document.getElementById('result-out').value;
-    console.log(text);
     navigator.clipboard.writeText(text);
-    alert('Result is copied')
+    document.getElementById("copy").innerHTML = "COPIED";
+    var copybtn = document.getElementById("copy");
+    copybtn.style.cssText = "background-color: #2ecc71;"+
+    "transition: background-color 0.2s;";
 }
 function show_keyboard() {  
     times++;
@@ -91,22 +93,40 @@ function opposite() {
     var tmp2 = document.getElementById("num2").value;
     if(input1 === true) {
         timesOpposite1 = timesOpposite1 + 1;
-        if(timesOpposite1 % 2 != 0) {
-            console.log(tmp1);
+        if(timesOpposite1 % 2 === 0 && tmp1.charAt(tmp1.length-1) === ')') {
+            console.log(timesOpposite1);
+            tmp1 = tmp1.slice(2,tmp1.length-1);
+            document.getElementById("num1").value  = tmp1;
+        } else if(timesOpposite1 % 2 != 0 && tmp1.charAt(tmp1.length-1) != ')'){
+            console.log(timesOpposite1);
             tmp1 = "-(" + tmp1 + ")";
-            console.log(tmp1);
+            document.getElementById("num1").value  = tmp1;
+        } else if (tmp1.charAt(tmp1.length-1) === ')') {
+            console.log(timesOpposite1);
+            tmp1 = tmp1.slice(2,tmp1.length-1);
             document.getElementById("num1").value  = tmp1;
         } else {
-            tmp1 = tmp1.slice(2,tmp1.length-1);
+            console.log(timesOpposite1);
+            tmp1 = "-(" + tmp1 + ")";
             document.getElementById("num1").value  = tmp1;
         }
     } else if (input2 === true) {
         timesOpposite2 = timesOpposite2 + 1;
-        if(timesOpposite2 % 2 != 0) {
+        if(timesOpposite2 % 2 === 0 && tmp2.charAt(tmp2.length-1) === ')') {
+            console.log(timesOpposite2);
+            tmp2 = tmp2.slice(2,tmp2.length-1);
+            document.getElementById("num2").value  = tmp2;
+        } else if(timesOpposite2 % 2 != 0 && tmp2.charAt(tmp2.length-1) != ')'){
+            console.log(timesOpposite2);
             tmp2 = "-("+tmp2+")";
             document.getElementById("num2").value  = tmp2;
-        } else {
+        } else if (tmp2.charAt(tmp2.length-1) === ')') {
+            onsole.log(timesOpposite2);
             tmp2 = tmp2.slice(2,tmp2.length-1);
+            document.getElementById("num2").value  = tmp2;
+        } else {
+            console.log(timesOpposite2);
+            tmp2 = "-("+tmp2+")";
             document.getElementById("num2").value  = tmp2;
         }
     }
