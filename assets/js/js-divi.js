@@ -12,6 +12,7 @@ function backToMenu() {
     window.location.href = "index.html";
 }
 function clickResult() {
+    var regex = /^[a-zA-Z]+$/;
     document.getElementById("alert-error1").innerHTML = '&emsp;';
     document.getElementById("alert-error2").innerHTML = '&emsp;';
     nofalse = true;
@@ -19,11 +20,11 @@ function clickResult() {
     expr2 = document.getElementById('num2').value.trim();
     console.log(expr1);
     console.log(expr2);
-    if(expr1 === 'NaN' || expr1 === 'undefined' || expr1 === 'null' || expr1 === 'true' || expr1 === 'false' || expr1.includes('/0') === true || expr1 === 'Infinity') {
+    if(expr1.match(regex)) {
         document.getElementById("alert-error1").innerHTML = '*Không đúng định dạng số';
         nofalse = false;
     }
-    if(expr2 === 'NaN' || expr2 === 'undefined' || expr2 === 'null' || expr2 === 'true' || expr2 === 'false' || expr2.includes('/0') === true || expr2 === 'Infinity') {
+    if(expr2.match(regex)) {
         document.getElementById("alert-error2").innerHTML = '*Không đúng định dạng số';
         nofalse = false;
     }
@@ -53,7 +54,7 @@ function clickResult() {
         document.getElementById("alert-error2").innerHTML = '*Không đúng định dạng số';
         nofalse = false;
      }
-     kqua = result1*result2;
+     kqua = result1/result2;
     console.log(kqua);
     if(nofalse) {
         window.location.href = 'resultDivi.html';
