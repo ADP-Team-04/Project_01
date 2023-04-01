@@ -93,7 +93,10 @@ function countinueResult(){
 function copyResult(){
     let text = document.getElementById('result-last').value;
     navigator.clipboard.writeText(text);
-    alert('Copy thành công');
+    document.getElementById("copy").innerHTML = "Copied";
+    var copybtn = document.getElementById("copy");
+    copybtn.style.cssText = "background-color: #2ecc71;"+
+    "transition: background-color 0.2s;";
 }
 function dropKeyBoard() {
     time++;
