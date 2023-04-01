@@ -139,6 +139,10 @@ button:active {
     background-color: rgb(122, 121, 121);
     transition: background-color 0.2s;
 }
+#result-board:hover{
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
 input[type='button']:hover {
     background-color: rgb(182, 180, 180);
     transition: background-color 0.5s;
