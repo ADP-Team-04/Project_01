@@ -131,10 +131,7 @@ body {
     position: relative;
     z-index: 1;
 }
-button:hover {
-    background-color: rgb(182, 180, 180);
-    transition: background-color 0.5s;
-}
+
 button:active {
     background-color: rgb(122, 121, 121);
     transition: background-color 0.2s;
@@ -150,8 +147,12 @@ input[type='button']:hover {
 
 input[type='button']:active {
     background-color: rgb(119, 117, 117);
-    transition: background-color 0.2s;
+    transition: background-color 0.5s;
 }
 .button.isHiden{
     display: none;
+}
+button:hover {
+    background-color: rgb(182, 180, 180);
+    transition: background-color 0.5s;
 }
