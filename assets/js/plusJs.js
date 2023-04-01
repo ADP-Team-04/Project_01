@@ -13,13 +13,16 @@ function clickResult() {
     document.getElementById("alert-error1").innerHTML = '&emsp;';
     document.getElementById("alert-error2").innerHTML = '&emsp;';
     nofalse = true;
-    num1= document.getElementById("num1").value.trim();
-    num2= document.getElementById('num2').value.trim();
+    num1= document.getElementById("num1").value;
+    num2= document.getElementById('num2').value;
     console.log(num1);
     console.log(num2);
+    num1 = num1.replaceAll(" ",'');
+    num2 = num2.replaceAll(" ",'');
     var regex=/[^\d +*/().-]/;
     var t=/^[\/*]/
     var div0=/\/0/
+    console.log(num1);
     if(num1 === "" ) {
         nofalse = false;
         document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';
