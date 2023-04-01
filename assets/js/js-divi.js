@@ -6,8 +6,8 @@ var times = 0;
 var input1 = false;
 var input2 = false;
 var nofalse = true;
-let timesOpposite1 = 0;
-let timesOpposite2 = 0;
+var timesOpposite1 = 0;
+var timesOpposite2 = 0;
 function backToMenu() {
     window.location.href = "index.html";
 }
@@ -56,9 +56,9 @@ function clickResult() {
      kqua = result1*result2;
     console.log(kqua);
     if(nofalse) {
-        window.location.href = 'resultMulti.html';
+        window.location.href = 'resultDivi.html';
     }
-    localStorage.setItem("in ra man hinh", kqua);
+    localStorage.setItem("in ra ket qua", kqua);
 }
 
 function opposite() {
@@ -127,7 +127,7 @@ function deleteAll() {
     document.getElementById("alert-error2").innerHTML = '&emsp;';
 }
 function exitResult() {
-    window.location.href = 'multi.html';
+    window.location.href = 'divi.html';
 }
 function dropKeyBoard() {
     times++;
