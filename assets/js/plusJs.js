@@ -13,8 +13,8 @@ function clickResult() {
     document.getElementById("alert-error1").innerHTML = '&emsp;';
     document.getElementById("alert-error2").innerHTML = '&emsp;';
     nofalse = true;
-    num1= document.getElementById("num1").value;
-    num2= document.getElementById('num2').value;
+    num1= document.getElementById("num1").value.trim();
+    num2= document.getElementById('num2').value.trim();
     console.log(num1);
     console.log(num2);
     num1 = num1.replaceAll(" ",'');
