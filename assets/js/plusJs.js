@@ -17,9 +17,12 @@ function clickResult() {
     num2= document.getElementById('num2').value.trim();
     console.log(num1);
     console.log(num2);
+    num1 = num1.replaceAll(" ",'');
+    num2 = num2.replaceAll(" ",'');
     var regex=/[^\d +*/().-]/;
     var t=/^[\/*]/
     var div0=/\/0/
+    console.log(num1);
     if(num1 === "" ) {
         nofalse = false;
         document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';
