@@ -53,12 +53,13 @@ function clickResult(){
         document.getElementById("alert-error2").innerHTML = 'Please enter again';
         check = false;
     }
-    minus = (tempX - tempY).toFixed(2) ;
-    console.log(minus);
-    localStorage.setItem("Input", minus); 
     if(check) {
         window.location.href = 'resultMinus.html';
     }
+    minus = (tempX - tempY).toFixed(2) ;
+    console.log(minus);
+    localStorage.setItem("Input", minus); 
+    
 }
 function deleteEle(){
     document.getElementById("num1").value = "";
@@ -107,7 +108,9 @@ function dropKeyBoard() {
 
     var minusBox = document.getElementById("idToAdd");
     if(time%2 != 0) {   
-        board.style = "display: block;";     
+        // board.style = "display: block;";
+        board.style.cssText = "display: block; animation: fadeOut 0.65s forwards;";
+        minusBox.style.cssText = "padding-bottom: 170px;"+" background: linear-gradient(180deg, rgb(65,62,62) 20%, rgb(65,62,62) 35%, rgb(174,198,144) 20%, rgb(174,198,144) 20%, rgb(174,198,144) 20%);";
     } else {
         board.style = "display:none";
     }

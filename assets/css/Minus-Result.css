@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgb(213,218,215);
+    background-color: rgb(84,105,92);
     font-family: Inter;
 }
 .all {
@@ -27,6 +27,7 @@ body {
     color: white;
     font-weight: bold;
     font-size: 25px;
+    letter-spacing: 9px;
 }
 .result {
     margin-top: 10px;
@@ -36,6 +37,7 @@ body {
     border: none;
     border-radius: 10px;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 .result-display {
@@ -52,31 +54,34 @@ body {
     font-family: Inter;
     font-weight: bold;
     font-weight: 10px;
+    
 }
 
 .copy-btn,.exit-btn {
-    width: 80px;
+    width: 70px;
     height: 35px;
-    font-size: 20px;
+    font-size: 15px;
     font-family: Inter;
-    font-weight: bold;
+    font-weight: normal;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    letter-spacing: 3px;
 }
 .countinue-btn {
-    width: 100px;
+    width: 115px;
     height: 35px;
     margin-left: 3px;
     margin-right: 3px;
-    font-size: 20px;
+    font-size: 15px;
     font-family: Inter;
-    font-weight: bold;
+    font-weight: normal;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    letter-spacing: 3px;
 }
 .continues-btn {
     width: 100px;
