@@ -15,24 +15,31 @@
     <div class="full-box">
         <div class="plus-box" id="idToAdd">
             <p class="title">PLUS</p>
+            <!-- input number box -->
             <div class="input-number" id="input-number">
+                <!-- number 1 -->
                 <div class="num1-input">
                     <label for="num1" >Number 1</label>
                     <input type="text" id="num1">
                 </div>
+                <!-- show error box 1 -->
                 <div>
                     <p class="alert-error1" id="alert-error1">&emsp;</p>
                 </div>
+                <!-- number 2 -->
                 <div class="num2-input">
                     <label for="num2" >Number 2</label>
                     <input type="text" id="num2">
                 </div>
+                <!-- show error box 2 -->
                 <div>
                     <p class="alert-error2" id="alert-error2" >&emsp;</p>
                 </div>
             </div>
+            <!-- key board box none display-->
             <div style="display: none" id="table-board-box">
                 <table id="table-board">
+                    <!-- row 1 -->
                     <tr>
                         <td>
                             <button onclick="deleteEle()" style="cursor: pointer;">AC</button>
@@ -47,6 +54,7 @@
                             <button style="cursor: pointer;" onclick="deleteOneElement()"><i class="fa-sharp fa-solid fa-delete-left"></i></button>
                         </td>
                     </tr>
+                    <!-- row 2 -->
                     <tr>
                         <td>
                             <input class="button-input" type="button" id="seven" value="7" onclick="clickInput('7')">
@@ -61,6 +69,7 @@
                             <input class="button-input" type="button" id="mul" value="x" onclick="clickInput('*')">
                         </td>
                     </tr>
+                     <!-- row 3 -->
                     <tr>
                         <td>
                             <input class="button-input" type="button" id="four" value="4" onclick="clickInput('4')">
@@ -75,6 +84,7 @@
                             <input class="button-input" type="button" id="minus" value="-" onclick="clickInput('-')">
                         </td>
                     </tr>
+                     <!-- row 4 -->
                     <tr>
                         <td>
                             <input class="button-input" type="button" id="one" value="1" onclick="clickInput('1')">
@@ -89,6 +99,7 @@
                             <input class="button-input" type="button" id="plus" value="+" onclick="clickInput('+')">
                         </td>
                     </tr>
+                     <!-- row 5 -->
                     <tr>
                         <td>
                             <button onclick="clickreturn()"><i class="fa-sharp fa-solid fa-rotate-left" style="cursor: pointer;"></i></button>
@@ -106,12 +117,14 @@
                     </tr>
                 </table>
             </div>
+            <!-- show keyboard -->
             <div class="keyboard-box">
                 <button class="keyboard" onclick="show_keyboard()">
                     <i class="fa-regular fa-keyboard"></i>
                 </button>
                 
             </div>
+            <!-- buttons box -->
             <div class="button-box">
                 <button class="return-btn" id="return-click" onclick="clickreturn()">
                      <i class="fa-solid fa-rotate-left"></i>
