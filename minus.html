@@ -14,89 +14,121 @@
     <div class = "all">
         <div class = "minus">
             <p class = "heading">MINUS</p>
+              <!-- input number box -->
             <div class="inputNumber">
+                <!-- number 1 -->
                 <div class="num1-input">
                     <label for="num1">Number 1</label>
                     <input type="text" id="num1">
                 </div>
+                <!-- show error box 1 -->
                 <div>
                     <p id="alert-error1">&emsp;</p>
                 </div>
+                <!-- number 2 -->
                 <div class="num2-input">
                     <label for="num2">Number 2</label>
                     <input type="text" id="num2">
                 </div>
+                <!-- show error box 2 -->
                 <div>
                     <p id="alert-error2">&emsp;</p>
                 </div>
             </div>
+            <!-- key board box none display-->
             <div  style="display: none" class = "keyboard-table-box">
                 <table class="keyboard-table">
+                <!-- row 1 -->
+                <tr>
+                    <!-- button AC (delete all number) -->
                     <td>
                         <button onclick="deleteEle()" style="cursor: pointer;">AC</button>
                     </td>
+                    <!-- button -/+ -->
                     <td>
                         <input class="button-input" type="button" id="pos-neg" value="+/-" onclick="opposite()">
                     </td>
+                    <!-- button / -->
                     <td>
                         <input class="button-input" type="button" id="div" value="/" onclick="clickInput('/')">
                     </td>
+                    <!-- button delete one number   -->
                     <td>
                         <button style="cursor: pointer;" onclick="deleteOneEle()"><i class="fa-sharp fa-solid fa-delete-left"></i></button>
                     </td>
                 </tr>
+                <!-- row 2 -->
                 <tr>
+                    <!-- button number seven    -->
                     <td>
                         <input class="button-input" type="button" id="seven" value="7" onclick="clickInput('7')">
                     </td>
+                    <!-- button number eight    -->
                     <td>
                         <input class="button-input" type="button" id="eight" value="8" onclick="clickInput('8')">
                     </td>
+                    <!-- button number nine    -->
                     <td>
                         <input class="button-input" type="button" id="nine" value="9" onclick="clickInput('9')">
                     </td>
+                    <!-- button X   -->
                     <td>
                         <input class="button-input" type="button" id="mul" value="x" onclick="clickInput('*')">
                     </td>
                 </tr>
+                <!-- row 3 -->
                 <tr>
+                    <!-- button number four -->
                     <td>
                         <input class="button-input" type="button" id="four" value="4" onclick="clickInput('4')">
                     </td>
+                    <!-- button number five -->
                     <td>
                         <input class="button-input" type="button" id="five" value="5" onclick="clickInput('5')">
                     </td>
+                    <!-- button number six -->
                     <td>
                         <input class="button-input" type="button" id="six" value="6" onclick="clickInput('6')">
                     </td>
+                    <!-- button -     -->
                     <td>
                         <input class="button-input" type="button" id="minus" value="-" onclick="clickInput('-')">
                     </td>
                 </tr>
+                <!-- row 4 -->
                 <tr>
+                    <!-- button number one -->
                     <td>
                         <input class="button-input" type="button" id="one" value="1" onclick="clickInput('1')">
                     </td>
+                    <!-- button number two -->
                     <td>
                         <input class="button-input" type="button" id="two" value="2" onclick="clickInput('2')">
                     </td>
+                    <!-- button number three -->
                     <td>
                         <input class="button-input" type="button" id="three" value="3" onclick="clickInput('3')">
                     </td>
+                    <!-- button + -->
                     <td>
                         <input class="button-input" type="button" id="plus" value="+" onclick="clickInput('+')">
                     </td>
                 </tr>
+                <!-- row 5 -->
                 <tr>
+                    <!-- button return (return index ) -->
                     <td>
                         <button onclick="exitResult()"><i class="fa-sharp fa-solid fa-rotate-left" style="cursor: pointer;"></i></button>
                     </td>
+                    <!-- button number zero -->
                     <td>
                         <input class="button-input" type="button" id="zero" value="0" onclick="clickInput('0')">
                     </td>
+                    <!-- button . -->
                     <td>
                         <input class="button-input" type="button" id="dot" value="." onclick="clickInput('.')" onclick="clickInput('.')">
                     </td>
+                    <!-- button = (result) -->
                     <td>
                         <button id="result-board" type="button" onclick="clickResult()" style="background-color: rgb(215, 140, 98); cursor: pointer;" >
                         =
@@ -105,16 +137,20 @@
                 </tr>
                 </table>
             </div>
+            <!-- button show keyboard  -->
             <div class="keyboard-box" style="text-align: right; margin-bottom: 5px; margin-right: 20px;">
                 <button class="keyboard-down" onclick="dropKeyBoard()">
                     <i class="fa-sharp fa-solid fa-keyboard"></i>
                 </button>
             </div>
             <div class = "button"  >
+                <!-- button return index -->
                 <button class="back-btn" onclick="exitMinus()"> 
                     <i class="fa-solid fa-rotate-left"></i>
                 </button>
+                <!-- button result -->
                 <button class = "result-btn" id = " result-click" onclick="clickResult()">Result</button>
+                <!-- button delete all number in number box -->
                 <button class = " delete-btn" id = " delete-btn" onclick="deleteEle()">
                      <i class="fa-solid fa-delete-left"></i>
                 </button>

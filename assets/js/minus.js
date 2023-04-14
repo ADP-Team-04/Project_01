@@ -4,6 +4,7 @@ var time = 0;
 var timesOpposite1 = 0;
 var timesOpposite2 = 0;
 var input1,input2 = false;
+// get number, input errors and function minus
 function clickResult(){  
     document.getElementById("alert-error1").innerHTML = '&emsp;';
     document.getElementById("alert-error2").innerHTML = '&emsp;';
@@ -56,11 +57,13 @@ function clickResult(){
     if(check) {
         window.location.href = 'resultMinus.html';
     }
+    // shorten the number
     minus = (tempX - tempY).toFixed(2) ;
     console.log(minus);
     localStorage.setItem("Input", minus); 
     
 }
+// delete all number input number
 function deleteEle(){
     document.getElementById("num1").value = "";
     document.getElementById("num2").value = "";
@@ -68,6 +71,7 @@ function deleteEle(){
     document.getElementById("alert-error2").innerHTML = '&emsp;';
     
 }
+// input one number
 function deleteOneEle(){
     let tmp;
     if(input1 === true) {
@@ -82,15 +86,19 @@ function deleteOneEle(){
         console.log(tmp);
     }
 }
+// return index
 function exitResult(){
     window.location.href= 'index.html';
 }
+// return index
 function exitMinus(){
     window.location.href = 'index.html';
 }
+// return to minus function 
 function countinueResult(){
     window.location.href= 'minus.html';
 }
+// copy the result just done
 function copyResult(){
     let text = document.getElementById('result-last').value;
     navigator.clipboard.writeText(text);
@@ -99,6 +107,7 @@ function copyResult(){
     copybtn.style.cssText = "background-color: #2ecc71;"+
     "transition: background-color 0.2s;";
 }
+// open keyboard
 function dropKeyBoard() {
     time++;
     console.log(document.querySelector(".button"));
@@ -115,6 +124,7 @@ function dropKeyBoard() {
         board.style = "display:none";
     }
 }
+// input number
 function clickInput(value) {
     if(input1 === true) {
         document.getElementById("num1").value += value;
@@ -122,6 +132,7 @@ function clickInput(value) {
         document.getElementById("num2").value += value;
     }
 }
+// create the opposite value with the old value
 function opposite() {
     var tmp1 = document.getElementById("num1").value;
     var tmp2 = document.getElementById("num2").value;
@@ -147,7 +158,7 @@ function opposite() {
         }
     }
 }
-
+// error left blank
 function catchException(value1,value2) {
     try {
         value1 = new Function('return ' + x)();

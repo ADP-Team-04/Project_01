@@ -2,7 +2,6 @@ var num1,num2;
 var result1;
 var result2;
 var kqua;
-
 function clickResult() {
     document.getElementById("alert-error1").innerHTML = '&emsp;';
     document.getElementById("alert-error2").innerHTML = '&emsp;';
