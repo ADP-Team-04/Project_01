@@ -46,11 +46,14 @@ function clickResult() {
     }
     if (expr1 === '') {
         nofalse = false;
-        document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';;
+        document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';
     }
     if (expr2 === '') {
         nofalse = false;
-        document.getElementById("alert-error2").innerHTML = '*Please do not leave it blank';;
+        document.getElementById("alert-error2").innerHTML = '*Please do not leave it blank';
+    }
+    if(!nofalse) {
+        return;
     }
     try {
         result1 = new Big(new Function('return ' + expr1)());
@@ -61,7 +64,7 @@ function clickResult() {
         try {
             result2 = new Big(new Function('return ' + expr2)());
             console.log(result2);
-            if (result2 === 0) {
+            if (result2 == 0) {
                 document.getElementById("alert-error2").innerHTML = '*Please do not enter the value 0';
                 nofalse = false;
             }
@@ -71,8 +74,7 @@ function clickResult() {
     }
     try {
         result2 = new Big(new Function('return ' + expr2)());
-        console.log(result2);
-        if (result2 === 0) {
+        if (result2 == 0) {
             document.getElementById("alert-error2").innerHTML = '*Please do not enter the value 0';
             nofalse = false;
         }

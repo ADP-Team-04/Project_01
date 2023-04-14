@@ -32,14 +32,16 @@ function clickResult() {
         document.getElementById("alert-error2").innerHTML = '*Please enter again';
         nofalse = false;
     }
-
     if (expr1 === '') {
         nofalse = false;
-        document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';;
+        document.getElementById("alert-error1").innerHTML = '*Please do not leave it blank';
     }
     if (expr2 === '') {
         nofalse = false;
-        document.getElementById("alert-error2").innerHTML = '*Please do not leave it blank';;
+        document.getElementById("alert-error2").innerHTML = '*Please do not leave it blank';
+    }
+    if(!nofalse) {
+        return;
     }
     try {
         result1 = new Big(new Function('return ' + expr1)());
