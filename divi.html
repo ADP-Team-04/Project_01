@@ -18,23 +18,29 @@
 <body>
     <div class="box-all">
         <div class="divi-box" id="idToAdd">
+            <!-- heading -->
             <p class="heading">Division</p>
             <div class="input-number">
+                <!-- data input -->
                 <div class="num1-input">
                     <label for="num1">Number 1</label>
                     <input type="text" id="num1">
                 </div>
+                <!-- error message -->
                 <div>
                     <p id="alert-error1">&emsp;</p>
                 </div>
+                <!-- data input -->
                 <div class="num2-input">
                     <label for="num2">Number 2</label>
                     <input type="text" id="num2">
                 </div>
+                <!-- error message -->
                 <div>
                     <p id="alert-error2">&emsp;</p>
                 </div>
             </div>
+            <!-- Virtual Keyboard -->
             <div style="display: none" id="table-board-box">
                 <table id="table-board">
                     <tr>
@@ -109,11 +115,13 @@
                     </tr>
                 </table>
             </div>
+            <!-- virtual keyboard button -->
             <div class="keyboard-box" style="text-align: right; margin-bottom: 5px; margin-right: 20px;">
                 <button class="keyboard-down" onclick="dropKeyBoard()">
                     <i class="fa-sharp fa-solid fa-keyboard"></i>
                 </button>
             </div>
+            <!-- back to menu button, result button, delete all button -->
             <div class="button-box">
                 <button class="back-btn" id="back-click" onclick="backToMenu()">
                     <i class="fa-sharp fa-solid fa-rotate-left"></i>
@@ -126,7 +134,9 @@
         </div>
     </div>
     <script src="assets/js/js-divi.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/big.js@6.2.1/big.min.js'></script>
     <script>
+        // This JS code is used to check which input cell is being interacted by the user
         document.getElementById('num1').addEventListener('click',function() {input1 = true; input2 = false;});
         document.getElementById('num2').addEventListener('click',function() {input1 = false; input2 = true;});
     </script>
