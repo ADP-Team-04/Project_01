@@ -1,7 +1,8 @@
 body {
-  margin: 0;
-  background-color: rgb(84, 105, 92);
-  font-family: Inter;
+
+   margin: 0;
+   background-color: rgb(84,105,92);
+   font-family: Inter;
 }
 .all {
   width: 80vw;
@@ -26,6 +27,23 @@ body {
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
 }
 .heading {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-family: Inter;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 9px;
+}
+.result {
+    margin-top: 10px;
+    border: 1px solid;
+    padding: 35px 5px;
+    background-color: rgb(209,215,195);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+
   margin-top: 0px;
   margin-bottom: 20px;
   font-family: Inter;
@@ -48,6 +66,44 @@ body {
 }
 
 #result-last {
+    font-size: 14px;
+    font-weight: bold;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Inter;
+    font-weight: bold;
+    font-weight: 10px;
+    
+}
+
+.copy-btn,.exit-btn {
+    width: 70px;
+    height: 35px;
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: normal;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+.countinue-btn {
+    width: 115px;
+    height: 35px;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: normal;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    letter-spacing: 3px;
+=======
   font-size: 14px;
   font-weight: bold;
   height: 35px;
